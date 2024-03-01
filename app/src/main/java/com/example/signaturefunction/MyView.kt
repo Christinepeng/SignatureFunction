@@ -38,6 +38,13 @@ class MyView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
         invalidate()
     }
 
+    fun undo() {
+        if (lines.size > 0) {
+            lines.removeLast()
+            invalidate()
+        }
+    }
+
     @SuppressLint("ClickableViewAccessibility")
     override fun onTouchEvent(event: MotionEvent): Boolean {
         when (event.action) {

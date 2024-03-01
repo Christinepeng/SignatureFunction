@@ -10,7 +10,7 @@ import com.example.signaturefunction.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private val binding: ActivityMainBinding by lazy {ActivityMainBinding.inflate(layoutInflater)}
+    private val binding: ActivityMainBinding by lazy { ActivityMainBinding.inflate(layoutInflater) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -25,5 +25,9 @@ class MainActivity : AppCompatActivity() {
 
     fun clear(view: View) {
         binding.myView.clear()
+    }
+
+    fun undo(view: View) {
+        binding.myView.undo()
     }
 }

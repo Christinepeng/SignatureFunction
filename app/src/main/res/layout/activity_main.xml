@@ -10,13 +10,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="16dp">
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/clear"
-            android:onClick="clear"/>
+            android:onClick="clear"
+            style="?android:attr/buttonBarButtonStyle" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/undo"
+            android:onClick="undo"
+            style="?android:attr/buttonBarButtonStyle" />
     </LinearLayout>
 
     <com.example.signaturefunction.MyView
