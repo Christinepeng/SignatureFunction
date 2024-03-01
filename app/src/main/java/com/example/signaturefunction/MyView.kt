@@ -33,6 +33,11 @@ class MyView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
         }
     }
 
+    fun clear() {
+        lines.clear()
+        invalidate()
+    }
+
     @SuppressLint("ClickableViewAccessibility")
     override fun onTouchEvent(event: MotionEvent): Boolean {
         when (event.action) {
